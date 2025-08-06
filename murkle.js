@@ -7,13 +7,12 @@
 
 const murkle = () => {
     const dbg = true;
-    const Selector_Path = 'comment-body-header.block > shreddit-async-loader:nth-child(1)';
+    const NEW_SELECTOR_PATH = 'comment-body-header.block > shreddit-async-loader:nth-child(1)';
+    const OLD_SELECTOR_PATH = '.usertext-edit'
 
-    const target = document.querySelector(Selector_Path);
+    const target = document.querySelector(NEW_SELECTOR_PATH) || document.querySelector(OLD_SELECTOR_PATH);
     if (target) target.style.display = 'none';
     else if (dbg) console.error('No comment body header found.');
 }
 
 window.setTimeout(murkle, 250);
-
-
