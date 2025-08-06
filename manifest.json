@@ -6,7 +6,7 @@
   "description": "Superficially removes the text comment box from Reddit, ensuring lurk mode.",
 
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/speaknoevil.png"
   },
 
   "content_scripts": [
@@ -14,5 +14,11 @@
       "matches": ["*://*.reddit.com/*"],
       "js": ["murkle.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "murkle@1.0"
+    }
+  }
+
 }
