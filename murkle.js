@@ -12,12 +12,8 @@ const murkle = () => {
     const target = document.querySelector(Selector_Path);
     if (target) target.style.display = 'none';
     else if (dbg) console.error('No comment body header found.');
-
-    console.log('I am running');
 }
 
-// document.addEventListener('load', () => {
-document.addEventListener('load', murkle);
-// });
-console.log(`I am loaded. ${Date.now()}`);
+window.setTimeout(murkle, 250);
+
 
