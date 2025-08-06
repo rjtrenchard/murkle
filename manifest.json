@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Murkle",
+  "version": "1.0",
+
+  "description": "Superficially removes the text comment box from Reddit, ensuring lurk mode.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["murkle.js"]
+    }
+  ]
+}
